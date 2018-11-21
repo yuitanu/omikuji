@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>占いサンプル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+
+    <div id="photo">
+      <img src="aaa.jpg" alt="">
+    </div>
+      <div id="p">
+        <br>
+      あなたのラッキーカラーを5人のイケメンが占ってくれます。<br>
+      今日一日の過ごし方の提案やラッキーアイテムも教えてくれるので参考にするといいことがあるかも！？
+    　<br>
+      </div>
+
+ <div id="bt1">
+  fortune telling
+ </div>
+
+  <div id="main">
+      <img src="#" alt="">
+      <div id="box1">
+      </div>
+  </div>
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+        $("#bt1").on("click",function(){
+            var random = Math.floor(Math.random() * 5);
+            //配列imgsに画像のファイル名を格納して、attrメソッドを使って画像を表示
+            var imgs = ["A.png","O.png","P.png","M.png","K.png"];
+
+            $("#main img").attr("src",imgs[random]);
+            //訪問者の名前を取得してから、HTMLに挿入。val()で入力された名前の取得
+            $("#bt1").remove();
+        });
+    });
+</script>
+</body>
+</html>
